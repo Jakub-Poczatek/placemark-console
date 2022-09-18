@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +62,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663505053122</updated>
-      <workItem from="1663505054331" duration="624000" />
+      <workItem from="1663505054331" duration="1817000" />
     </task>
+    <task id="LOCAL-00001" summary="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed.">
+      <created>1663505750246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663505750246</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,5 +87,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed." />
   </component>
 </project>
