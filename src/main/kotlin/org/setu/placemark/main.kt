@@ -13,7 +13,9 @@ fun main(args: Array<String>){
     do {
         input = menu()
         when (input) {
-            1 -> println("You Chose Add Placemark")
+            1 -> addPlacemark()
+            2 -> updatePlacemark()
+            3 -> listAllPlacemarks()
             -1 -> println("Exiting App")
             else -> println("Invalid Option")
         }
@@ -40,4 +42,16 @@ fun menu() : Int {
         -9
 
     return option
+}
+
+fun addPlacemark() {
+    println("You Chose Add Placemark")
+}
+
+fun updatePlacemark() {
+    println("You chose Update Placemark")
+}
+
+fun listAllPlacemarks() {
+    println("You chose List All Placemarks")
 }
