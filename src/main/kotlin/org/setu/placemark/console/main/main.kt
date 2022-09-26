@@ -1,7 +1,9 @@
 package org.setu.placemark.console.main
 
 import mu.KotlinLogging
+import org.setu.placemark.console.models.PlacemarkModel
 
+var placemark = PlacemarkModel()
 private val logger = KotlinLogging.logger {}
 
 fun main(args: Array<String>){
@@ -45,11 +47,22 @@ fun menu() : Int {
 }
 
 fun addPlacemark() {
-    println("You Chose Add Placemark")
+    println("Add Placemark")
+    println()
+    print("Enter a title: ")
+    placemark.title = readLine()!!
+    print("Enter a description: ")
+    placemark.description = readLine()!!
+    println("You entered " + placemark.title + " for title and " + placemark.description + " for description")
 }
 
 fun updatePlacemark() {
-    println("You chose Update Placemark")
+    println("Update Placemark")
+    println("Enter a new title for [ " + placemark.title + " ]: ")
+    placemark.title = readLine()!!
+    println("Enter a new description for [ " + placemark.description + " ]: ")
+    placemark.description = readLine()!!
+    println("You updated [ " + placemark.title + " ] for title and [ " + placemark.description + " ] for description")
 }
 
 fun listAllPlacemarks() {
