@@ -55,6 +55,7 @@ fun addPlacemark() {
     print("Enter a description: ")
     placemark.description = readLine()!!
     if(placemark.title.isNotEmpty() && placemark.description.isNotEmpty()){
+        placemark.id++
         placemarks.add(placemark.copy())
         logger.info("Placemark Added: [ $placemark ]")
     } else {
@@ -77,4 +78,23 @@ fun listAllPlacemarks() {
     placemarks.forEach {
         logger.info("${it}")
     }
+}
+
+
+
+fun getId(): Long {
+    var strId: String?
+    var searchId: Long
+    print("Enter id to Search/Update: ")
+    strId = readLine()!!
+    searchId = if (strId.toLongOrNull() != null && strId.isNotEmpty())
+        strId.toLong()
+    else
+        -9
+    return searchId
+}
+
+fun search(id: Long) : PlacemarkModel? {
+    var foundPlacemark: PlacemarkModel? = placemarks.find { p -> p.id == id}
+    return foundPlacemark
 }
