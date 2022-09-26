@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Lab-K01 Placemark-v1: Section 5.2&#10;&#10;Completed.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" afterDir="false" />
     </list>
@@ -96,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664190732047</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed.">
+      <created>1664225830631</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664225830631</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +124,7 @@
     <MESSAGE value="Lab-K01 Placemark-v1: Section 4&#10;&#10;Completed." />
     <MESSAGE value="Lab-K02 Placemark-v2: Section 4&#10;&#10;Completed." />
     <MESSAGE value="Lab-K02 Placemark-v2: Section 5&#10;&#10;Completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab-K02 Placemark-v2: Section 5&#10;&#10;Completed." />
+    <MESSAGE value="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed." />
   </component>
 </project>

@@ -75,10 +75,16 @@ fun updatePlacemark() {
         logger.info("Placemark doesn't exist")
     } else {
         println("Enter a new title for [ " + placemark.title + " ]: ")
-        placemark.title = readLine()!!
+        var title = readLine()!!
         println("Enter a new description for [ " + placemark.description + " ]: ")
-        placemark.description = readLine()!!
-        logger.info("You updated [ " + placemark.title + " ] for title and [ " + placemark.description + " ] for description")
+        var description = readLine()!!
+        if(title.isNotEmpty() && description.isNotEmpty()) {
+            placemark.title = title
+            placemark.description = description
+            logger.info("You updated [ " + placemark.title + " ] for title and [ " + placemark.description + " ] for description")
+        } else {
+            logger.info("Placemark not updated")
+        }
     }
 }
 
