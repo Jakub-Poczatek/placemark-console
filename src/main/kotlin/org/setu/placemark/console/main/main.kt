@@ -1,10 +1,11 @@
 package org.setu.placemark.console.main
 
 import mu.KotlinLogging
+import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
 
 private val logger = KotlinLogging.logger {}
-val placemarks = ArrayList<PlacemarkModel>()
+val placemarks = PlacemarkMemStore()
 
 fun main(args: Array<String>){
     logger.info {"Launching Placemark Console App"}
@@ -57,8 +58,7 @@ fun addPlacemark() {
     print("Enter a Description: ")
     placemark.description = readLine()!!
     if (placemark.title.isNotEmpty() && placemark.description.isNotEmpty()) {
-        placemark.id = placemarks.size.toLong()
-        placemarks.add(placemark.copy())
+        placemarks.create(placemark.copy())
         logger.info("Placemark Added : [ $placemark ]")
     } else {
         logger.info("Placemark Not Added")
@@ -91,9 +91,7 @@ fun updatePlacemark() {
 fun listAllPlacemarks() {
     println("List All Placemarks")
     println()
-    placemarks.forEach {
-        println("${it}")
-    }
+    placemarks.logAll()
     println()
 }
 
@@ -120,12 +118,12 @@ fun getId(): Long {
 }
 
 fun search(id: Long) : PlacemarkModel? {
-    var foundPlacemark: PlacemarkModel? = placemarks.find { p -> p.id == id}
+    var foundPlacemark: PlacemarkModel? = placemarks.findOne(id)
     return foundPlacemark
 }
 
 fun dummyData() {
-    placemarks.add(PlacemarkModel(1, "New York New York", "So Good They Named It Twice"))
-    placemarks.add(PlacemarkModel(2, "Ring of Kerry", "Some place in the Kingdom"))
-    placemarks.add(PlacemarkModel(3, "Waterford City", "You get great Blaas Here!!"))
+    placemarks.create(PlacemarkModel(1, "New York New York", "So Good They Named It Twice"))
+    placemarks.create(PlacemarkModel(2, "Ring of Kerry", "Some place in the Kingdom"))
+    placemarks.create(PlacemarkModel(3, "Waterford City", "You get great Blaas Here!!"))
 }
