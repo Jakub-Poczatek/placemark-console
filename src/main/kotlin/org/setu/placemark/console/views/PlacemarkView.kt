@@ -1,6 +1,5 @@
 package org.setu.placemark.console.views
 
-import org.setu.placemark.console.main.placemarks
 import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
 
@@ -25,14 +24,14 @@ class PlacemarkView {
         return option
     }
 
-    fun listAllPlacemarks() {
+    fun listPlacemarks(placemarks: PlacemarkMemStore) {
         println("List All Placemarks")
         println()
         placemarks.logAll()
         println()
     }
 
-    fun showPlacemark(placemark : PlacemarkModel?) {
+    fun showPlacemark(placemark: PlacemarkModel?) {
         if(placemark != null){
             println("Placement Details: $placemark")
         } else {
@@ -40,7 +39,7 @@ class PlacemarkView {
         }
     }
 
-    fun addPlacementData(placemark: PlacemarkModel) : Boolean {
+    fun addPlacemarkData(placemark: PlacemarkModel) : Boolean {
         println()
         print("Enter a Title: ")
         placemark.title = readLine()!!

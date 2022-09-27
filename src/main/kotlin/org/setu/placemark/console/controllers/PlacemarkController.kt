@@ -40,18 +40,18 @@ class PlacemarkController {
 
     fun add(){
         val placemark = PlacemarkModel()
-        if(placemarkView.addPlacementData(placemark))
+        if(placemarkView.addPlacemarkData(placemark))
             placemarks.create(placemark)
         else
             logger.info("Placemark Not Added")
     }
 
     fun list() {
-        placemarkView.listAllPlacemarks()
+        placemarkView.listPlacemarks(placemarks)
     }
 
     fun update() {
-        placemarkView.listAllPlacemarks()
+        placemarkView.listPlacemarks(placemarks)
         var id = placemarkView.getId()
         var placemark: PlacemarkModel? = placemarks.findOne(id)
         placemarkView.updatePlacemarkData(placemark)
