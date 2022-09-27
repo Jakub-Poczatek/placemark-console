@@ -35,6 +35,10 @@ class PlacemarkMemStore : PlacemarkStore{
         }
     }
 
+    override fun delete(placemark: PlacemarkModel) {
+        placemarks.remove(placemark)
+    }
+
     internal fun logAll() {
         placemarks.forEach {logger.info("${it}")}
     }

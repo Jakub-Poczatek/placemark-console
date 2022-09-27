@@ -4,9 +4,11 @@ import mu.KotlinLogging
 import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
 import org.setu.placemark.console.views.PlacemarkView
+import org.setu.placemark.console.models.PlacemarkJSONStore
 
 class PlacemarkController {
-    val placemarks = PlacemarkMemStore()
+    //val placemarks = PlacemarkMemStore()
+    val placemarks = PlacemarkJSONStore()
     val placemarkView = PlacemarkView()
     val logger = KotlinLogging.logger {}
 
@@ -19,23 +21,56 @@ class PlacemarkController {
         return placemarkView.menu()
     }
 
+    fun start() {
+        var input: Int
+
+        do {
+            input = menu()
+            when (input) {
+                1 -> add()
+                2 -> update()
+                3 -> list()
+                4 -> search()
+                5 -> delete()
+                -99 -> dummyData()
+                -1 -> println("Exiting App")
+                else -> println("Invalid Option")
+            }
+            println()
+        } while (input != -1)
+        logger.info { "Shutting Down Placemark Console App" }
+    }
+
     fun add(){
         val placemark = PlacemarkModel()
-        if(placemarkView.addPlacementData(placemark))
+        if(placemarkView.addPlacemarkData(placemark))
             placemarks.create(placemark)
         else
             logger.info("Placemark Not Added")
     }
 
     fun list() {
-        placemarkView.listAllPlacemarks()
+        placemarkView.listPlacemarks(placemarks)
     }
 
     fun update() {
-        placemarkView.listAllPlacemarks()
+        placemarkView.listPlacemarks(placemarks)
         var id = placemarkView.getId()
         var placemark: PlacemarkModel? = placemarks.findOne(id)
         placemarkView.updatePlacemarkData(placemark)
+    }
+
+    fun delete() {
+        placemarkView.listPlacemarks(placemarks)
+        var id = placemarkView.getId()
+        val placemark: PlacemarkModel? = placemarks.findOne(id)
+
+        if(placemark != null){
+            placemarks.delete(placemark)
+            println("Placemark Deleted...")
+            placemarkView.listPlacemarks(placemarks)
+        } else
+            println("Placemark not deleted...")
     }
 
     fun search() {
