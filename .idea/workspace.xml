@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Refactoring the Model (MVC)&#10;&#10;Complete.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/views/PlacemarkView.kt" afterDir="false" />
+    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Refactoring the View (MVC)&#10;&#10;Complete.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" afterDir="false" />
     </list>
@@ -69,7 +69,7 @@
       <updated>1663505053122</updated>
       <workItem from="1663505054331" duration="2354000" />
       <workItem from="1664185465941" duration="6238000" />
-      <workItem from="1664285444879" duration="6880000" />
+      <workItem from="1664285444879" duration="8238000" />
     </task>
     <task id="LOCAL-00001" summary="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed.">
       <created>1663505750246</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664286935781</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring the View (MVC)&#10;&#10;Complete.">
+      <created>1664293086314</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293086314</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +144,7 @@
     <MESSAGE value="Lab-K02 Placemark-v2: Section 5&#10;&#10;Completed." />
     <MESSAGE value="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed." />
     <MESSAGE value="Refactoring the Model (MVC)&#10;&#10;Complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring the Model (MVC)&#10;&#10;Complete." />
+    <MESSAGE value="Refactoring the View (MVC)&#10;&#10;Complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring the View (MVC)&#10;&#10;Complete." />
   </component>
 </project>
