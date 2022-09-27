@@ -3,9 +3,11 @@ package org.setu.placemark.console.main
 import mu.KotlinLogging
 import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
+import org.setu.placemark.console.views.PlacemarkView
 
 private val logger = KotlinLogging.logger {}
 val placemarks = PlacemarkMemStore()
+val placemarkView = PlacemarkView()
 
 fun main(args: Array<String>){
     logger.info {"Launching Placemark Console App"}
@@ -14,11 +16,11 @@ fun main(args: Array<String>){
     var input: Int
 
     do {
-        input = menu()
+        input = placemarkView.menu()
         when (input) {
             1 -> addPlacemark()
             2 -> updatePlacemark()
-            3 -> listAllPlacemarks()
+            3 -> placemarkView.listAllPlacemarks()
             4 -> searchPlacemark()
             -99 -> dummyData()
             -1 -> println("Exiting App")
@@ -29,97 +31,27 @@ fun main(args: Array<String>){
     logger.info {"Shutting Down Placemark Console App"}
 }
 
-fun menu() : Int {
-    var option : Int
-    var input: String?
-
-    println("Main Menu")
-    println(" 1. Add Placemark")
-    println(" 2. Update Placemark")
-    println(" 3. List All Placemarks")
-    println(" 4. Search Placemarks")
-    println("-1. Exit")
-    println()
-    print("Enter Option: ")
-    input = readLine()!!
-    option = if (input.toIntOrNull() != null && !input.isEmpty())
-        input.toInt()
-    else
-        -9
-    return option
-}
-
 fun addPlacemark() {
-    var placemark = PlacemarkModel()
-    println("Add Placemark")
-    println()
-    print("Enter a Title: ")
-    placemark.title = readLine()!!
-    print("Enter a Description: ")
-    placemark.description = readLine()!!
-    if (placemark.title.isNotEmpty() && placemark.description.isNotEmpty()) {
-        placemarks.create(placemark.copy())
-        logger.info("Placemark Added : [ $placemark ]")
+    val placemark = PlacemarkModel()
+
+    if(placemarkView.addPlacementData(placemark)){
+        placemarks.create(placemark)
     } else {
         logger.info("Placemark Not Added")
     }
 }
 
 fun updatePlacemark() {
-    println("Update Placemark")
-    println()
-    listAllPlacemarks()
-    var id = getId()
-    var placemark: PlacemarkModel? = search(id)
-    if(placemark == null){
-        logger.info("Placemark doesn't exist")
-    } else {
-        println("Enter a new title for [ " + placemark.title + " ]: ")
-        var title = readLine()!!
-        println("Enter a new description for [ " + placemark.description + " ]: ")
-        var description = readLine()!!
-        if(title.isNotEmpty() && description.isNotEmpty()) {
-            placemark.title = title
-            placemark.description = description
-            logger.info("You updated [ " + placemark.title + " ] for title and [ " + placemark.description + " ] for description")
-        } else {
-            logger.info("Placemark not updated")
-        }
-    }
-}
-
-fun listAllPlacemarks() {
-    println("List All Placemarks")
-    println()
-    placemarks.logAll()
-    println()
+    placemarkView.listAllPlacemarks()
+    var id = placemarkView.getId()
+    var placemark: PlacemarkModel? = placemarks.findOne(id)
+    placemarkView.updatePlacemarkData(placemark)
 }
 
 fun searchPlacemark(){
-    var searchId = getId()
-    var placemark: PlacemarkModel? = search(searchId)
-    if (placemark == null){
-        logger.info("Placemark does not exist...")
-    } else {
-        println("Placemark Details: $placemark")
-    }
-}
-
-fun getId(): Long {
-    var strId: String?
-    var searchId: Long
-    print("Enter id to Search/Update: ")
-    strId = readLine()!!
-    searchId = if (strId.toLongOrNull() != null && strId.isNotEmpty())
-        strId.toLong()
-    else
-        -9
-    return searchId
-}
-
-fun search(id: Long) : PlacemarkModel? {
-    var foundPlacemark: PlacemarkModel? = placemarks.findOne(id)
-    return foundPlacemark
+    var id = placemarkView.getId()
+    var placemark: PlacemarkModel? = placemarks.findOne(id)
+    placemarkView.showPlacemark(placemark)
 }
 
 fun dummyData() {
