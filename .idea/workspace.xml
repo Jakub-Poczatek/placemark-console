@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Refactoring the View (MVC)&#10;&#10;Complete.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" afterDir="false" />
+    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Lab-K02 Placemark-v2: Section 6&#10;&#10;Completed.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/helpers/FileHelpers.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/main/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +22,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="Lab-K03_Placemark-v3" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
