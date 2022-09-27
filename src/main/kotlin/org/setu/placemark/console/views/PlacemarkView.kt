@@ -25,6 +25,13 @@ class PlacemarkView {
         return option
     }
 
+    fun listPlacemarks(placemarks: PlacemarkMemStore) {
+        println("List All Placemarks")
+        println()
+        placemarks.logAll()
+        println()
+    }
+
     fun listPlacemarks(placemarks: PlacemarkJSONStore) {
         println("List All Placemarks")
         println()

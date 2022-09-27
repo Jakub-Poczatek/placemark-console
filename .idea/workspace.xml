@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="JSON Persistence&#10;&#10;Complete.">
+    <list default="true" id="7fb21676-294d-4b43-88bc-69789ad2af4a" name="Changes" comment="Switching Stores&#10;&#10;Complete.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/controllers/PlacemarkController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/views/PlacemarkView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/placemark/console/views/PlacemarkView.kt" afterDir="false" />
@@ -32,6 +32,7 @@
     <option name="BRANCH" value="Lab-K03_Placemark-v3" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -88,7 +89,7 @@
       <workItem from="1663505054331" duration="2354000" />
       <workItem from="1664185465941" duration="6238000" />
       <workItem from="1664285444879" duration="8238000" />
-      <workItem from="1664300969764" duration="1670000" />
+      <workItem from="1664300969764" duration="2016000" />
     </task>
     <task id="LOCAL-00001" summary="Lab-K01 Placemark-v1: Section 3&#10;&#10;Completed.">
       <created>1663505750246</created>
@@ -153,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664302437057</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Switching Stores&#10;&#10;Complete.">
+      <created>1664302848015</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664302848015</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +188,7 @@
     <MESSAGE value="Refactoring the View (MVC)&#10;&#10;Complete." />
     <MESSAGE value="Additional Helper Files&#10;&#10;Complete." />
     <MESSAGE value="JSON Persistence&#10;&#10;Complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="JSON Persistence&#10;&#10;Complete." />
+    <MESSAGE value="Switching Stores&#10;&#10;Complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching Stores&#10;&#10;Complete." />
   </component>
 </project>
