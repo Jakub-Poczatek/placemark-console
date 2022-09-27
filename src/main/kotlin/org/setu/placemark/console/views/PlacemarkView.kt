@@ -2,6 +2,7 @@ package org.setu.placemark.console.views
 
 import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
+import org.setu.placemark.console.models.PlacemarkJSONStore
 
 class PlacemarkView {
     fun menu() : Int {
@@ -24,7 +25,7 @@ class PlacemarkView {
         return option
     }
 
-    fun listPlacemarks(placemarks: PlacemarkMemStore) {
+    fun listPlacemarks(placemarks: PlacemarkJSONStore) {
         println("List All Placemarks")
         println()
         placemarks.logAll()

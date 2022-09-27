@@ -4,9 +4,11 @@ import mu.KotlinLogging
 import org.setu.placemark.console.models.PlacemarkMemStore
 import org.setu.placemark.console.models.PlacemarkModel
 import org.setu.placemark.console.views.PlacemarkView
+import org.setu.placemark.console.models.PlacemarkJSONStore
 
 class PlacemarkController {
-    val placemarks = PlacemarkMemStore()
+    //val placemarks = PlacemarkMemStore()
+    val placemarks = PlacemarkJSONStore()
     val placemarkView = PlacemarkView()
     val logger = KotlinLogging.logger {}
 
